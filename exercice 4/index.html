@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app="App" lang="fr" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Exercice 4</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+        <script src="angularjs.js"></script>
+    </head>
+  <!-- afficher la liste des voitures et leur couleur du fichier voiture.json uniquement si la couleur est verte. -->
+<body>
+<div ng-controller="voituresCtrl">
+  <table cellspacing="2px" cellpadding="2px;" rules="all" style="border:solid 1px black;">
+    <thead>
+      <th>Modèle</th>
+      <th>Couleur</th>
+    </thead>
+    <!-- afficher la liste des voitures et leur couleur du fichier voiture.json uniquement si la couleur n'est pas verte. -->
+      <tr  ng-repeat="voiture in voitures" ng-if="voiture.couleur != 'verte'">
+      <td>
+        {{ voiture.marque}}
+      </td>
+      <td>
+        {{ voiture.couleur}}
+      </td>
+    </tr>
+  </table>
+</div>
+
+</body>
+</html>

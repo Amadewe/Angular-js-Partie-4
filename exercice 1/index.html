@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="fr" ng-app="" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Exercice 1</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+        <script src="script.js"></script>
+    </head>
+<body>
+  <!-- trier le tableau par ordre alphabétique du modèle. -->
+<div>
+  <button  ng-click="count = count + 1" ng-init="count=0" id="buttonPlus" type="button" name="button">+</button>
+  <button  ng-click="count = count - 1" ng-init="count=0" id="buttonMoins" type="button" name="button">-</button>
+  <p> count: {{count}}</p>
+</div>
+</body>
+</html>
