@@ -1,20 +1,20 @@
 <!doctype html>
-<html ng-app lang="fr" dir="ltr">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Exercice 5</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
-        <script src="angularjs.js"></script>
-    </head>
-   <!-- Au clic sur l'un ou sur l'autre afficher ou non un paragraphe de votre choix. -->
-   <!-- Au click on vérifie que le "text" est égal à false / car notre directive est ng-hide -->
-<body>
-  <button ng-click="text = false" type="button" name="button" >Afficher</button>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Exercice 5</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+  <script src="angularjs.js"></script>
+</head>
+<!-- Au clic sur l'un ou sur l'autre afficher ou non un paragraphe de votre choix. -->
+<!-- Au click on vérifie que le "text" est égal à false / car notre directive est ng-hide -->
+<body ng-app="app" ng-controller="textController">
+  <button ng-click="text = true" type="button" name="button" >Afficher</button>
   <!-- Au click on vérifie que le "text" est égal à true / car notre directive est ng-hide donc le texte se cache -->
-  <button ng-click="text = true" type="button" name="button" >Cacher</button>
-<p ng-hide="text" >
+  <button ng-click="text = false" type="button" name="button" >Cacher</button>
+  <p ng-show="text" >
     Un arbre est une plante ligneuse terrestre comportant un tronc sur lequel s'insèrent des branches ramifiées portant le feuillage dont l'ensemble forme le houppier, appelé aussi couronne.
-</p>
+  </p>
 </body>
 </html>

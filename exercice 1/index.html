@@ -1,18 +1,23 @@
 <!doctype html>
-<html lang="fr" ng-app dir="ltr">
+<html lang="fr" dir="ltr">
     <head>
         <meta charset="UTF-8" />
         <title>Exercice 1</title>
-        <link rel="stylesheet" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
-        <script src="script.js"></script>
+        <script src="assets/js/angular.js"></script>
     </head>
-<body>
-  <!-- trier le tableau par ordre alphabétique du modèle. -->
+<body ng-app="app" ng-controller="changeNumberController">
 <div>
-  <button  ng-click="count = count + 1" ng-init="count=0" id="buttonPlus" type="button" name="button">+</button>
-  <button  ng-click="count = count - 1" ng-init="count=0" id="buttonMoins" type="button" name="button">-</button>
-  <p> count: {{count}}</p>
+    <!-- Au clic sur le bouton + incrémenter le chiffre présent dans le paragraphe de 1. -->
+  <!-- <button  ng-click="count = count + 1" ng-init="count=0" id="buttonPlus" type="button" name="button">+</button> -->
+  <!-- Au clic sur le bouton - décrémenter le chiffre de 1.  -->
+  <!-- <button  ng-click="count = count - 1" ng-init="count=0" id="buttonMoins" type="button" name="button">-</button> -->
+  <!-- <p> count: {{count}}</p> -->
+
+<!-- 2eme version avec un script (inital = 0) -->
+<button  ng-click="count = count + 1" id="buttonPlus" type="button" name="button">+</button>
+<button  ng-click="count = count - 1" id="buttonMoins" type="button" name="button">-</button>
+<p> count: {{count}}</p>
 </div>
 </body>
 </html>

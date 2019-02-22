@@ -1,17 +1,16 @@
 <!doctype html>
-<html ng-app="App" lang="fr" dir="ltr">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Exercice 2</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
-        <script src="angularjs.js"></script>
-    </head>
-<body ng-controller="voituresCtrl">
-  <div ng-repeat="voiture in voitures">
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Exercice 2</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+  <script src="angularjs.js"></script>
+</head>
+<body ng-app="App" ng-controller="voituresCtrl">
+  <div ng-repeat="voiture in carsArray">
     <!-- afficher la liste des voitures et leur couleur du fichier voiture.json. -->
-{{ voiture.marque | json }}
-{{ voiture.couleur | json }}
-</div>
+    {{ voiture.marque }}
+    {{ voiture.couleur }}
+  </div>
 </body>
 </html>

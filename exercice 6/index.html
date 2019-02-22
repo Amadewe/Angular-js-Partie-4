@@ -1,23 +1,24 @@
 <!doctype html>
-<html ng-app lang="fr" dir="ltr">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Exercice 6</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
-    </head>
-<body>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Exercice 6</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+  <script src="angularjs.js"></script>
+</head>
+<body ng-app="app" ng-controller="testController">
   <!-- Au clic sur le premier uniquement le paragrahe 1 doit être visible. Au clic sur le bouton deux,
   seulement le paragrahe 2 doit aparaître. -->
   <!-- au clic de l'arbre si text est égal à false alors il affiche le texte de l'arbre mais cache le texte de la plante car (le texte de la plante est automatique caché) -->
-  <button ng-click="text = false" type="button" name="button" >Arbre</button>
-  <button ng-click="text = true" type="button" name="button" >Plante</button>
-<p ng-hide="text" >
+  <button ng-click="text = true" type="button" name="button" >Arbre</button>
+  <button ng-click="text = false" type="button" name="button" >Plante</button>
+  <p ng-show="text" >
     Un arbre est une plante ligneuse terrestre comportant un tronc sur lequel s'insèrent des branches ramifiées portant le feuillage dont l'ensemble forme le houppier, appelé aussi couronne.
-</p>
+  </p>
 
-<p ng-show="text" >
+  <p ng-hide="text" >
     Les plantes sont des organismes photosynthétiques et autotrophes, caractérisés par des cellules végétales. Elles forment l'un des règnes des eucaryotes. Ce règne est un groupe monophylétique comprenant les plantes terrestres, les algues vertes, les algues rouges et les glaucophytes.
-</p>
+  </p>
 </body>
 </html>

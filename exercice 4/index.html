@@ -16,7 +16,9 @@
       <th>Couleur</th>
     </thead>
     <!-- afficher la liste des voitures et leur couleur du fichier voiture.json uniquement si la couleur n'est pas verte. -->
-      <tr  ng-repeat="voiture in voitures" ng-if="voiture.couleur != 'verte'">
+      <tr  ng-repeat="voiture in carsArray" ng-if="voiture.couleur != 'verte'">
+        <!-- <tr ng-repeat="voiture in voitures | filter : {couleur : '!verte'}"> -->
+
       <td>
         {{ voiture.marque}}
       </td>
